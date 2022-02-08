@@ -10,7 +10,7 @@ namespace composicao_exercicio.Entities
 
         public Department()
         {
-
+            
         }
 
         public Department (string name)
