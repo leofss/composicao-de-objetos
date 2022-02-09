@@ -35,10 +35,22 @@ namespace composicao_exercicio
                 double valuePerHour = double.Parse(Console.ReadLine());
                 Console.Write("Duration(hours) ");
                 int hours = int.Parse(Console.ReadLine());
-                HourContract contract = new HourContract(date, valuePerHour, hours);
+                HourContract contract = new HourContract(date, valuePerHour, hours); //inst contrato
                 worker.AddContract(contract);
 
             }
+
+            Console.WriteLine();
+
+            Console.WriteLine("Enter month and year to calculate income (MM/ YYYY): ");
+            string monthandyear = Console.ReadLine();
+            int month = int.Parse(monthandyear.Substring(0, 2));
+            int year = int.Parse(monthandyear.Substring(3));
+            Console.WriteLine("Name: " + worker.Name);
+            Console.WriteLine("Dep: " + worker.Department.Name);
+            Console.WriteLine("Income for: " + monthandyear + ": " + worker.Income(year, month));
+
+
 
 
         }
